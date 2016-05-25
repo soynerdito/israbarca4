@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/newpic1" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="0dip" >
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:background="@drawable/header" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"
+        android:layout_x="0dp"
+        android:layout_y="50dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/homebutton"
+            android:paddingBottom="10dp" >
+        </Button>
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/menubutton"
+            android:paddingBottom="10dp" >
+        </Button>
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/view_orderbutton"
+            android:paddingBottom="10dp" >
+        </Button>
+
+        <Button
+            android:id="@+id/Button05"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/call_waiterbutton"
+            android:paddingBottom="10dp" >
+        </Button>
+
+        <Button
+            android:id="@+id/Button04"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/helpbutton"
+            android:paddingBottom="10dp" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_x="80dp"
+        android:layout_y="50dp" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="fill_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="100dp"
+            android:text="@string/metropol_restaurant_was_founded_in_san_juan_puerto_rico_in_1965_by_jos_pepe_canosa_a_cuban_immigrant_who_had_moved_to_the_island_the_year_before_his_concept_of_good_service_at_good_prices_family_ambience_and_excellent_cuban_and_puertorican_food_"
+            android:textColor="#ffffff" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_x="80dp"
+        android:layout_y="150dp"
+        tools:ignore="DuplicateIds" >
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="fill_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="100dp"
+            android:text="Our compromise is to always serve you with excellence, the best of our kitchen. "
+            android:textColor="#ffffff" >
+        </TextView>
+    </LinearLayout>
+
+</AbsoluteLayout>

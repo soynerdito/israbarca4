@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="22"
+    density="xhdpi"
+    format="7"
+    timestamp="744214462733251" >
+
+    <task
+        name="javac"
+        duration="1246" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="409" />
+    <task
+        name="verifier"
+        duration="355" />
+
+    <artifact
+        location="C:\Users\IsraelDiaz\Desktop\Androidapp\ReadyTOGOApp\build\outputs\apk\ReadyTOGOApp-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="744214462733251" >
+        <artifact
+            location="C:\Users\IsraelDiaz\Desktop\Androidapp\ReadyTOGOApp\build\outputs\apk\ReadyTOGOApp-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
