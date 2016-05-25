@@ -327,4 +327,104 @@ public class Appetizers<Header> extends Activity {
 		startActivity(menuit);
 		return;
 	}
+	
+	public class FetchAppetizersTask extends AsyncTask<String, Void, Boolean> {
+	
+		@Override
+		public Boolean doInBackground(String... params) {
+			HttpClient httpclient = new DefaultHttpClient();
+			//HttpGet httpget = new HttpGet("http://192.168.11.3/lab/appetizers.json");
+			//HttpGet httpget = new HttpGet("http://127.0.0.1:8888/appetizers.json");
+			//HttpGet httpget = new HttpGet("192.168.1.1:8000/appetizers.json");
+	        	HttpGet httpget = new HttpGet("http://localhost:8888/appetizers.json");
+		
+		
+		try{
+			HttpResponse response = httpclient.execute(httpget);
+			StatusLine statusLine = response.getStatusLine();
+			
+			int statusCode = statusLine.getStatusCode();
+		      	if (statusCode == 200) {
+		        	HttpEntity entity = response.getEntity();
+	             		//if (entity != null) {
+				InputStream instream = entity.getContent();
+				BufferedReader str = new BufferedReader(new InputStreamReader(instream));
+				
+
+				String ans = new String("");
+				build = new String("");
+				while ((ans = str.readLine()) != null) {
+					build = build + ans;
+					Log.d("JSON", ans);
+				}
+			}
+		
+		
+		      JSONArray arr = new JSONArray(build);
+				String arrlen = Integer.toString(arr.length());
+				Log.d("Array Length", arrlen);
+				JSONObject not_available = arr.getJSONObject(0);
+				JSONArray ing_unAvailable = not_available.getJSONArray("unavailable");
+				String [] ingr = new String[ing_unAvailable.length()];
+				for(int k=0;k<ing_unAvailable.length();k++)
+				{
+					JSONObject obj = ing_unAvailable.getJSONObject(k);
+					ingr[k] = obj.getString("ingredient");
+				}
+				for(int i=1;i<arr.length();i++)
+				{
+					JSONObject food = null;
+					food = arr.getJSONObject(i);
+					String name = food.getString("name");
+					Log.d("name",name);
+					String description = food.getString("description");
+					Log.d("desc",description);
+					String rating = food.getString("rating");
+					Log.d("rating",rating);
+					String price = food.getString("price");
+					Log.d("price",price);
+					String cooktime = food.getString("cooktime");
+					Log.d("cooktime",cooktime);
+					JSONArray ingredients = food.getJSONArray("ingredients");
+					String [] ing = new String[ingredients.length()];
+					for(int k=0;k<ingredients.length();k++)
+					{
+						JSONObject ingd = ingredients.getJSONObject(k);
+						ing[k] = ingd.getString("ingredient");
+					}
+	
+					int flag=0;
+	
+					for(int l=0;l<ing.length;l++)
+					{
+						for(int m=0;m<ingr.length;m++)
+						{
+							if(ing[l].matches(ingr[m])) flag=1;
+						}
+					}
+	
+	
+					if(flag==0)
+					{
+	
+						menulist sr1 = new menulist();
+						sr1.setName(name);
+						sr1.setdescription(description);
+						sr1.setprice("$. "+price);
+						items.add(sr1);
+	
+					}
+	
+				}
+				return true;
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				return false;
+			}
+			
+		}
+		
+	}
+	}
 }
