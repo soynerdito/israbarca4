@@ -455,7 +455,7 @@ public class ViewOrder extends Activity {
 					{
 
 						HttpClient httpclient = new DefaultHttpClient();
-						HttpPost httppost = new HttpPost("http://127.0.0.1:8000/test.php");
+						HttpPost httppost = new HttpPost("http://127.0.0.1:8000/Test.php");
 						httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 						HttpResponse response = httpclient.execute(httppost);
 						HttpEntity entity = response.getEntity();

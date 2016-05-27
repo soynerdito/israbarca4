@@ -21,7 +21,7 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class test extends Activity
+public class Test extends Activity
 {
 
 	Bundle g;
