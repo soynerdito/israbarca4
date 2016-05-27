@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class First extends Activity {
@@ -38,7 +37,7 @@ public class First extends Activity {
         g.putIntArray("qty", qty);
         g.putIntArray("amount", amount);
         
-        home = new Intent(getBaseContext(), main.class);
+        home = new Intent(getBaseContext(), Main.class);
         t1.setOnClickListener((OnClickListener) new homeListener());
         
         

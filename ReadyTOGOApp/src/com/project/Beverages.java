@@ -1,7 +1,6 @@
 package com.project;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -10,7 +9,6 @@ import java.util.UUID;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
@@ -18,7 +16,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
@@ -69,7 +66,7 @@ public class Beverages extends Activity {
 		orderButton = (Button)findViewById(R.id.Button03);
 		helpButton = (Button)findViewById(R.id.Button04);
 		callwaiterButton = (Button)findViewById(R.id.Button05);
-		homeit = new Intent(getBaseContext(), main.class);
+		homeit = new Intent(getBaseContext(), Main.class);
 		menuit = new Intent(getBaseContext(), Menu.class);
 		helpit = new Intent(getBaseContext(), Help.class);
 		orderit = new Intent(getBaseContext(), ViewOrder.class);

@@ -1,7 +1,6 @@
 package com.project;
 
 import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -68,7 +67,7 @@ public class FinalOrder extends Activity {
 		totalText = (TextView)findViewById(R.id.TextView03);
 		disText = (TextView)findViewById(R.id.TextView04);
 
-		homeit = new Intent(getBaseContext(), main.class);
+		homeit = new Intent(getBaseContext(), Main.class);
 		menuit = new Intent(getBaseContext(), Menu.class);
 		helpit = new Intent(getBaseContext(), Help.class);
 		orderit = new Intent(getBaseContext(), ViewOrder.class);

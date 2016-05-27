@@ -15,7 +15,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu"> </activity>
-        <activity android:name=".main"> </activity>
+        <activity android:name=".Main"> </activity>
         <activity android:name=".Help"> </activity>
         <activity android:name=".ViewOrder"> </activity>
          <activity android:name=".Appetizers"> </activity>

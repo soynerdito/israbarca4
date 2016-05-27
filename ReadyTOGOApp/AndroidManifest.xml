@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".main" />
+        <activity android:name=".Main" />
         <activity android:name=".Help" />
         <activity android:name=".ViewOrder" />
         <activity android:name=".Appetizers" />

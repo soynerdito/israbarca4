@@ -1,6 +1,5 @@
 package com.project;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -48,7 +47,7 @@ public class Menu extends Activity {
 		maincourseButton = (Button)findViewById(R.id.Button09);
 		saladButton = (Button)findViewById(R.id.Button10);
 		dessertButton = (Button)findViewById(R.id.Button11);
-		homeit = new Intent(getBaseContext(), main.class);
+		homeit = new Intent(getBaseContext(), Main.class);
 		menuit = new Intent(getBaseContext(), Menu.class);
 		helpit = new Intent(getBaseContext(), Help.class);
 		orderit = new Intent(getBaseContext(), ViewOrder.class);

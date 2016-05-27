@@ -70,7 +70,7 @@ public class Dessert extends Activity {
         orderButton = (Button)findViewById(R.id.Button03);
         helpButton = (Button)findViewById(R.id.Button04);
         callwaiterButton = (Button)findViewById(R.id.Button05);
-        homeit = new Intent(getBaseContext(), main.class);
+        homeit = new Intent(getBaseContext(), Main.class);
         menuit = new Intent(getBaseContext(), Menu.class);
         helpit = new Intent(getBaseContext(), Help.class);
         orderit = new Intent(getBaseContext(), ViewOrder.class);
